@@ -74,4 +74,4 @@ jobs:
         env:
           VERSION: ${{ steps.meta.outputs.version }}
         run: |
-	        docker-compose up -d
+          docker-compose up -d
