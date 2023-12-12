@@ -12,11 +12,8 @@ jobs:
     runs-on:
       - self-hosted
       - ${{ matrix.docker }}
-    services:
-      redis:
-        image: redis
     container:
-      image: ubuntu
+      image: node:16-buster-slim
       options: --cpus 1
     timeout-minutes: 10
     steps:
