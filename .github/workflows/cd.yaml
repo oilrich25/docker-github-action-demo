@@ -16,7 +16,11 @@ jobs:
       image: node:16-buster-slim
       options: --cpus 1
     timeout-minutes: 10
+    env:
+      CUSTOM_RUNNER_NAME: MyCustomRunner
     steps:
+      - name: Set Custom Runner Name
+        run: echo "RUNNER_NAME=${CUSTOM_RUNNER_NAME}" >> $GITHUB_ENV
       - run: env
       - run: ls
       - run: pwd
